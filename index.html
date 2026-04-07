@@ -3,132 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-    <title>ALMARBAT • التحليل الكامل لشاشات Ahmetou | المرحلة 2 (Acheteur + Vendeur)</title>
+    <title>ALMARBAT • التحليل الكامل لشاشات INEJIH | قائد الفريق | Driver Pro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap');
         * { transition: all 0.2s ease; }
-        body { font-family: 'Cairo', 'Inter', system-ui; background: #faf7f2; }
+        body { font-family: 'Cairo', 'Inter', system-ui; background: #f0f4f8; }
         .screen-card { transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1); cursor: pointer; }
-        .screen-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 25px 35px -12px rgba(0,0,0,0.25); }
+        .screen-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 30px 40px -12px rgba(0,0,0,0.3); }
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f0e7db; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb { background: #d97706; border-radius: 10px; }
+        ::-webkit-scrollbar-track { background: #e2e8f0; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: #0f3b3b; border-radius: 10px; }
         @keyframes fadeSlide { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
         .animate-entry { animation: fadeSlide 0.4s ease-out; }
-        .section-header { border-right: 8px solid #d97706; background: linear-gradient(90deg, #fffbeb, transparent); }
-        .acheteur-badge { background: #0f766e; }
-        .vendeur-badge { background: #b45309; }
+        .section-header { border-right: 8px solid #0f766e; background: linear-gradient(90deg, #e6f7f5, transparent); }
+        .inejih-leader-badge { background: #b91c1c; box-shadow: 0 0 15px rgba(185,28,28,0.5); }
     </style>
 </head>
 <body>
 
-<!-- HEADER خاص بـ Ahmetou - المرحلة 2 الكاملة (Acheteur + Vendeur) -->
-<div class="bg-gradient-to-r from-amber-900 to-amber-700 text-white shadow-2xl sticky top-0 z-50">
+<!-- HEADER خاص بـ INEJIH - قائد الفريق (THE LEADER) مع لمسة عصرية وفخمة -->
+<div class="bg-gradient-to-r from-teal-900 to-emerald-800 text-white shadow-2xl sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-3">
         <div class="flex items-center gap-3">
-            <i class="fa-solid fa-user-tie text-4xl drop-shadow"></i>
+            <div class="relative">
+                <i class="fa-solid fa-crown text-5xl drop-shadow-lg text-yellow-300"></i>
+                <span class="absolute -top-2 -right-3 bg-red-600 text-white text-[10px] font-bold px-1.5 rounded-full">LEADER</span>
+            </div>
             <div>
-                <h1 class="text-2xl md:text-3xl font-black tracking-tight">ALMARBAT • التحليل الكامل لشاشات Ahmetou</h1>
-                <p class="text-xs opacity-90">المرحلة 2 | السوق المتكامل: Acheteur (المشتري) + Vendeur (البائع) — 11 شاشة موثقة بتحليل معماري وتدفقات البيانات</p>
+                <h1 class="text-2xl md:text-3xl font-black tracking-tight">ALMARBAT • التحليل الكامل لشاشات <span class="text-yellow-300">INEJIH</span></h1>
+                <p class="text-xs opacity-90">قائد الفريق | المرحلة المتقدمة: Driver Hub + Livraison + Suivi Intelligent — 6 شاشات موثقة بتحليل معماري وتقنيات الجيل القادم</p>
             </div>
         </div>
         <div class="flex gap-3 items-center">
-            <div class="bg-white/20 backdrop-blur-sm rounded-full px-5 py-1 text-sm font-bold"><i class="fa-regular fa-clock"></i> 11 شاشة (4 Acheteur + 7 Vendeur)</div>
-            <button id="downloadAllAhmetouBtn" class="bg-amber-800 hover:bg-amber-900 px-5 py-2 rounded-xl font-bold text-sm shadow-lg flex items-center gap-2"><i class="fa-solid fa-download"></i> تحميل جميع شاشات Ahmetou (JSON + TXT)</button>
+            <div class="bg-white/20 backdrop-blur-sm rounded-full px-5 py-1 text-sm font-bold"><i class="fa-regular fa-star"></i> 6 شاشات (Inejih Driver)</div>
+            <button id="downloadAllInejihBtn" class="bg-red-800 hover:bg-red-900 px-5 py-2 rounded-xl font-bold text-sm shadow-lg flex items-center gap-2 transition-all"><i class="fa-solid fa-download"></i> تحميل جميع شاشات INEJIH (JSON + TXT + تحليل معماري)</button>
         </div>
     </div>
 </div>
 
-<!-- ملخص سريع عن الشاشات المستخلصة من الصور (الملفات كلها) -->
+<!-- ملخص سريع عن تفوق INEJIH - شاشات السائق المستخلصة من الصور -->
 <div class="max-w-7xl mx-auto px-5 pt-8 pb-4">
-    <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-5 shadow-md border-r-8 border-amber-600 mb-8">
+    <div class="bg-gradient-to-r from-teal-50 to-emerald-50 rounded-2xl p-5 shadow-xl border-r-8 border-teal-700 mb-8">
         <div class="flex flex-wrap gap-6 items-center justify-between">
             <div>
-                <h2 class="text-2xl font-black text-amber-800 flex items-center gap-3"><i class="fa-solid fa-magnifying-glass-chart"></i> تحليل شامل لجميع ملفات Ahmetou</h2>
-                <p class="text-gray-700 mt-1 max-w-3xl">بناءً على الملفات: <strong>ahmetou screens_achetuer (7,8,9,10,11) + ahmetou screens_venduer (1,2,3,4,5,6) + شاشات إضافية</strong> — تم استخلاص <strong>11 شاشة</strong> مقسمة إلى قسمين: <span class="bg-teal-100 px-2 py-0.5 rounded text-teal-800">Acheteur (4 شاشات: دفع، شراء جماعي، إشعارات، تتبع)</span> و <span class="bg-amber-100 px-2 py-0.5 rounded text-amber-800">Vendeur (7 شاشات: لوحة تحكم، إضافة حيوان، نشر، إشعارات بائع، تتبع الطلبات)</span>. كل شاشة موثقة بوصف معماري وتقنيات وتدفق بيانات.</p>
-            </div>
-            <div class="flex gap-3">
-                <div class="bg-teal-100 rounded-2xl p-3 text-center">
-                    <div class="text-3xl font-black text-teal-800">4</div>
-                    <div class="text-xs font-bold">شاشات ACHETEUR</div>
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-truck-fast text-4xl text-teal-800"></i>
+                    <h2 class="text-2xl font-black text-teal-800 flex items-center gap-3"><i class="fa-solid fa-chart-line"></i> تحليل شامل لشاشات INEJIH (السائق المحترف)</h2>
                 </div>
-                <div class="bg-amber-100 rounded-2xl p-3 text-center">
-                    <div class="text-3xl font-black text-amber-800">7</div>
-                    <div class="text-xs font-bold">شاشات VENDEUR</div>
+                <p class="text-gray-700 mt-2 max-w-4xl">بناءً على الملفات المقدمة: <strong>livreur screens inejih (1.jpeg إلى 6.jpeg)</strong> — تم استخلاص <strong>6 شاشات متكاملة</strong> تغطي لوحة تحكم السائق، مهام التوصيل، تتبع QR، الدفع الناجح، التنقل الذكي. <span class="bg-teal-100 px-2 py-0.5 rounded-full text-teal-800 font-bold">Inejih هو القائد</span> ويتميز بمنظومة لوجستية متطورة مع Bankily وQR والمتابعة الحية.</p>
+            </div>
+            <div class="flex gap-4">
+                <div class="bg-teal-800 text-white rounded-2xl p-4 text-center shadow-lg">
+                    <div class="text-4xl font-black">6</div>
+                    <div class="text-xs font-bold">شاشات السائق</div>
+                    <div class="text-[10px] opacity-80">Driver Intelligence</div>
+                </div>
+                <div class="bg-amber-800 text-white rounded-2xl p-4 text-center shadow-lg">
+                    <div class="text-4xl font-black">100%</div>
+                    <div class="text-xs font-bold">تحليل معماري</div>
+                    <div class="text-[10px] opacity-80">Full-Stack</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- أزرار سريعة للتنقل -->
-    <div class="flex flex-wrap gap-4 mb-8 justify-center">
-        <a href="#acheteur-section" class="bg-teal-700 hover:bg-teal-800 text-white px-6 py-2 rounded-full font-bold shadow-md"><i class="fa-regular fa-user"></i> شاشات المشتري (Acheteur)</a>
-        <a href="#vendeur-section" class="bg-amber-700 hover:bg-amber-800 text-white px-6 py-2 rounded-full font-bold shadow-md"><i class="fa-solid fa-store"></i> شاشات البائع (Vendeur)</a>
+    <!-- أزرار سريعة للتنقل + شعار القائد -->
+    <div class="flex flex-wrap gap-4 mb-10 justify-center">
+        <a href="#driverSection" class="bg-teal-700 hover:bg-teal-800 text-white px-8 py-3 rounded-full font-bold shadow-md transition-all"><i class="fa-solid fa-motorcycle"></i> شاشات السائق INEJIH (6 شاشات)</a>
+        <div class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-full px-6 py-2 text-amber-800 font-bold text-sm shadow-inner"><i class="fa-regular fa-hand-peace"></i> القائد: INEJIH | بنية تحتية متقدمة لتوصيل المواشي</div>
     </div>
 </div>
 
-<!-- ===================== قسم Acheteur (المشتري) ===================== -->
-<div id="acheteur-section" class="max-w-7xl mx-auto px-5 pb-8">
-    <div class="section-header pr-5 py-3 mb-6 flex justify-between items-center flex-wrap bg-white/50 rounded-xl">
+<!-- ===================== قسم INEJIH السائق (جميع الشاشات) ===================== -->
+<div id="driverSection" class="max-w-7xl mx-auto px-5 pb-16">
+    <div class="section-header pr-5 py-3 mb-6 flex justify-between items-center flex-wrap bg-white/70 rounded-xl shadow-sm">
         <div>
-            <h2 class="text-2xl font-black text-teal-800"><i class="fa-regular fa-user text-teal-600 ml-2"></i> شاشات المشتري | Acheteur Screens</h2>
-            <p class="text-sm text-gray-600">تجربة الدفع، الشراء الجماعي، الإشعارات، وتتبع الطلب (مستخلصة من الملفات 7-11)</p>
+            <h2 class="text-2xl font-black text-teal-800"><i class="fa-solid fa-tachometer-alt text-teal-600 ml-2"></i> شاشات السائق INEJIH | Livreur Screens</h2>
+            <p class="text-sm text-gray-600">لوحة الإشعارات، مهام التوصيل، تفاصيل الشحنة، الملاحة QR، تأكيد الدفع (مستخلصة من الصور الأصلية)</p>
         </div>
-        <span class="bg-teal-100 text-teal-800 px-4 py-1 rounded-full text-sm font-bold">4 شاشات</span>
+        <span class="bg-teal-100 text-teal-800 px-4 py-1 rounded-full text-sm font-bold">6 شاشات | القائد</span>
     </div>
-    <div id="acheteurContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 mb-16"></div>
+    <div id="inejihContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8"></div>
 </div>
 
-<!-- ===================== قسم Vendeur (البائع) ===================== -->
-<div id="vendeur-section" class="max-w-7xl mx-auto px-5 pb-16">
-    <div class="section-header pr-5 py-3 mb-6 flex justify-between items-center flex-wrap bg-white/50 rounded-xl">
-        <div>
-            <h2 class="text-2xl font-black text-amber-800"><i class="fa-solid fa-store text-amber-600 ml-2"></i> شاشات البائع | Vendeur Screens</h2>
-            <p class="text-sm text-gray-600">لوحة التحكم، إضافة حيوان (3 خطوات)، نشر الإعلان، إشعارات البائع، تتبع الطلبات (مستخلصة من الملفات venduer_1 إلى venduer_6)</p>
-        </div>
-        <span class="bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-sm font-bold">7 شاشات</span>
-    </div>
-    <div id="vendeurContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7"></div>
-</div>
-
-<!-- مودال تفصيلي معماري موحد لكلا القسمين -->
+<!-- مودال تفصيلي معماري فاخر يعكس قيادة INEJIH -->
 <div id="techModal" class="fixed inset-0 bg-black/90 z-[9999] hidden items-center justify-center p-4 backdrop-blur-sm" onclick="if(event.target===this) closeTechModal()">
     <div class="bg-white rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-hidden flex flex-col shadow-2xl animate-entry">
-        <div class="bg-gradient-to-r from-amber-100 to-white px-6 py-4 border-b flex justify-between items-center sticky top-0">
+        <div class="bg-gradient-to-r from-teal-800 to-emerald-700 px-6 py-4 border-b flex justify-between items-center sticky top-0 text-white">
             <div class="flex items-center gap-3 flex-wrap">
-                <span id="modalTypeBadge" class="bg-amber-700 text-white text-xs font-bold px-4 py-1.5 rounded-full"><i class="fa-regular fa-store"></i> شاشة</span>
-                <h2 id="modalTitle" class="text-xl md:text-2xl font-bold text-amber-900"></h2>
+                <span id="modalTypeBadge" class="bg-yellow-400 text-teal-900 text-xs font-bold px-4 py-1.5 rounded-full"><i class="fa-solid fa-crown"></i> شاشة INEJIH - القائد</span>
+                <h2 id="modalTitle" class="text-xl md:text-2xl font-bold"></h2>
             </div>
             <div class="flex gap-3 items-center">
-                <span class="bg-amber-800 text-white px-4 py-1.5 rounded-full text-sm font-bold"><i class="fa-regular fa-user"></i> Ahmetou</span>
+                <span class="bg-red-700 text-white px-4 py-1.5 rounded-full text-sm font-bold"><i class="fa-solid fa-user-astronaut"></i> INEJIH (Leader)</span>
                 <button onclick="closeTechModal()" class="w-8 h-8 rounded-full bg-slate-200 hover:bg-red-100 text-red-600">✕</button>
             </div>
         </div>
         <div class="flex flex-col md:flex-row overflow-auto flex-1">
             <div class="md:w-1/2 bg-gray-900 flex items-center justify-center p-6">
-                <img id="modalImg" class="max-h-[60vh] md:max-h-[75vh] w-auto object-contain rounded-xl shadow-2xl border border-white/30" alt="screen preview">
+                <img id="modalImg" class="max-h-[60vh] md:max-h-[75vh] w-auto object-contain rounded-xl shadow-2xl border-4 border-teal-400" alt="screen preview">
             </div>
             <div class="md:w-1/2 p-6 space-y-5 overflow-y-auto">
-                <div>
-                    <h3 class="text-amber-800 font-bold text-sm uppercase tracking-wider"><i class="fa-regular fa-file-lines"></i> الوصف المعماري المستخلص</h3>
+                <div class="bg-teal-50 p-4 rounded-2xl">
+                    <h3 class="text-teal-800 font-bold text-sm uppercase tracking-wider"><i class="fa-regular fa-file-lines"></i> الوصف المعماري المستخلص (Inejih Driver Logic)</h3>
                     <p id="modalDesc" class="text-slate-700 mt-1 leading-relaxed text-base"></p>
                 </div>
                 <div>
-                    <h3 class="text-amber-800 font-bold text-sm uppercase tracking-wider"><i class="fa-solid fa-layer-group"></i> Full-Stack التقنيات</h3>
+                    <h3 class="text-teal-800 font-bold text-sm uppercase tracking-wider"><i class="fa-solid fa-layer-group"></i> Full-Stack التقنيات (Leader Grade)</h3>
                     <div id="modalTechStack" class="flex flex-wrap gap-2 mt-2"></div>
                 </div>
                 <div>
-                    <h3 class="text-amber-800 font-bold text-sm uppercase tracking-wider"><i class="fa-solid fa-microchip"></i> المكتبات / الحزم</h3>
+                    <h3 class="text-teal-800 font-bold text-sm uppercase tracking-wider"><i class="fa-solid fa-microchip"></i> المكتبات / الحزم المتطورة</h3>
                     <div id="modalLibraries" class="flex flex-wrap gap-2 mt-2"></div>
                 </div>
-                <div class="bg-gradient-to-r from-slate-100 to-amber-50 p-4 rounded-2xl">
-                    <h3 class="font-bold text-amber-800"><i class="fa-solid fa-diagram-project"></i> تدفق البيانات (API / Events)</h3>
+                <div class="bg-gradient-to-r from-slate-100 to-teal-50 p-4 rounded-2xl border-r-4 border-teal-600">
+                    <h3 class="font-bold text-teal-800"><i class="fa-solid fa-diagram-project"></i> تدفق البيانات (API / WebSocket / Edge)</h3>
                     <p id="modalFlow" class="text-sm text-slate-800 mt-2 font-mono"></p>
                 </div>
                 <div class="flex gap-3 pt-2">
-                    <button onclick="downloadSingleScreen()" id="modalDownloadSingle" class="flex-1 bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-xl font-bold transition-all"><i class="fa-solid fa-download"></i> تحميل هذه الشاشة (PNG)</button>
+                    <button onclick="downloadSingleScreen()" id="modalDownloadSingle" class="flex-1 bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-xl font-bold transition-all"><i class="fa-solid fa-download"></i> تحميل هذه الشاشة (PNG)</button>
                     <button onclick="closeTechModal()" class="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white py-3 rounded-xl font-bold transition-all"><i class="fa-regular fa-circle-check"></i> إغلاق</button>
                 </div>
             </div>
@@ -138,220 +133,127 @@
 
 <script>
     // ============================================================
-    // بناء قائمة الشاشات الكاملة لـ Ahmetou: 4 Acheteur + 7 Vendeur = 11 شاشة
-    // استناداً إلى الملفات المرفقة:
-    // Acheteur: 11 (تأكيد دفع), 10 (معالجة), 9 (فارغ), 8 (إشعارات), 7 (شراء جماعي) — ولكننا ندمج تتبع الطلب من screens6 كشاشة رابعة للمشتري.
-    // Vendeur: venduer_1 (لوحة تحكم), venduer_2 (اختيار النوع), venduer_3 (السعر والوصف), venduer_4 (الصور والموقع), venduer_5 (نشر نجاح), venduer_6 (إشعارات البائع + تتبع)
+    // شاشات INEJIH الكاملة - القائد (6 شاشات مستخلصة من الصور المرفقة)
+    // الملفات: livreur sccreens inejih 1.jpeg .. 6.jpeg
+    // تم تحليل كل شاشة بدقة عالية مع وصف معماري وتقنيات حديثة
     // ============================================================
     
-    const ahmetouScreens = [
-        // ========== ACHETEUR (4 شاشات أساسية) ==========
+    const inejihScreens = [
         {
             id: 1,
-            src: "ahmetou screens_achetuer 11.jpeg",
-            title: "تأكيد الدفع عبر Bankily | إدخال الرمز",
-            category: "acheteur",
-            assign: "Ahmetou",
-            desc: "شاشة إدخال رمز الدفع الصادر من تطبيق Bankily بعد إتمام الدفع. تعرض المبلغ الإجمالي 12,500 MRU ورمز مكون من 6-8 أرقام مع صلاحية 5 دقائق. زر 'Verify Payment' لتأكيد المعاملة بتشفير كامل.",
-            tech: ["Flutter", "Django REST", "AES-256"],
-            libs: ["pinput", "dio", "flutter_bloc", "encrypt"],
-            flow: "POST /api/payment/bankily/verify → إرسال الرمز → الخادم يتحقق مع Bankily API → تحديث حالة الطلب إلى 'تم الدفع' → إشعار فوري."
+            src: "livreur sccreens inejih 1.jpeg",
+            title: "لوحة الإشعارات وإحصائيات السائق | Driver Notifications",
+            category: "driver",
+            leader: "Inejih",
+            desc: "شاشة رئيسية للسائق تعرض إشعارات فورية: مهمة نشطة (انتظار استلام 15+ دقيقة)، مهمة جديدة #8829، إتمام توصيل بقيمة 45 SAR مضافة للمحفظة. إحصائيات الأداء: 142 كم اليوم، 98% تسليم في الوقت المحدد. أزرار التنقل السريع (Profile, Wallet, Alerts, Market, Home). نظام متكامل لإدارة السائقين مع أولوية عاجلة.",
+            tech: ["Flutter", "Django REST", "Firebase Cloud Messaging", "Redis"],
+            libs: ["flutter_local_notifications", "firebase_messaging", "provider", "intl", "fl_chart"],
+            flow: "FCM دفع الإشعارات → WebSocket للحالات الحرجة → GET /api/driver/dashboard → عرض الإحصائيات والمسافة → تحديث مباشر للمحفظة بعد كل توصيل."
         },
         {
             id: 2,
-            src: "ahmetou screens_achetuer 10.jpeg",
-            title: "معالجة الدفع | جاري التحقق",
-            category: "acheteur",
-            assign: "Ahmetou",
-            desc: "شاشة انتظار أثناء تأكيد الدفع عبر Bankily. تظهر رسالة 'جاري التحقق من الدفع...' مع اتصال حيوي (LIVE CONNECTION) ومعرف المعاملة TXN_9921_ALM.",
-            tech: ["Flutter", "WebSocket", "Django Channels"],
-            libs: ["lottie", "web_socket_channel", "connectivity_plus"],
-            flow: "WebSocket للاستماع إلى تحديث حالة الدفع → عند النجاح توجيه إلى شاشة النجاح، وإلا عرض خطأ مع إعادة المحاولة."
+            src: "livreur sccreens inejih 2.jpeg",
+            title: "تفاصيل التوصيل: معلومات البائع والحيوان والمسار",
+            category: "driver",
+            leader: "Inejih",
+            desc: "عرض شامل لمهمة التوصيل: معلومات البائع (أحمد المنصوري +971501234567) ومزرعة الجمال بالعوير. بيانات الحيوان: جمل #CAM-102، الوزن 450 كجم، العمر 4 سنوات. مسار التوصيل: من مزرعة العوير إلى قرية دبي التراثية (45 كم). زر 'Scan QR at Pickup' لمسح رمز الحيوان و'Start Delivery' لبدء الرحلة.",
+            tech: ["Flutter", "Google Maps API", "QR Scanner", "Geolocator"],
+            libs: ["google_maps_flutter", "mobile_scanner", "geolocator", "url_launcher", "flutter_svg"],
+            flow: "GET /api/driver/task/{id} → عرض تفاصيل المهمة → POST /api/driver/scan-qr لبدء الاستلام → تحديث حالة الطلب إلى 'IN_PROGRESS'."
         },
         {
             id: 3,
-            src: "ahmetou screens_achetuer 7.jpeg",
-            title: "الشراء الجماعي | Group Buy",
-            category: "acheteur",
-            assign: "Ahmetou",
-            desc: "تفاصيل المجموعة لشراء خروف موريتاني ممتاز: المبلغ المجموع 65,000 MRU والهدف 100,000 MRU. قائمة المشاركون (أحمد لامين، فاطمة محمد، سيدي يحيى). زر 'Pay My Share' للدفع عبر Bankily.",
-            tech: ["Flutter", "Django Channels", "Redis"],
-            libs: ["percent_indicator", "web_socket_channel", "cached_network_image"],
-            flow: "WebSocket لتحديث تقدم المجموعة والمشاركين; POST /api/group-buy/join لتسديد الحصة; GET /api/group-buy/{id} لجلب التفاصيل."
+            src: "livreur sccreens inejih 3.jpeg",
+            title: "قائمة مهام التوصيل | Active & Completed Deliveries",
+            category: "driver",
+            leader: "Inejih",
+            desc: "واجهة المهام: تبويب نشط / مكتمل. مهمة نشطة: مستودع الرياض المركزي (مسافة 2.4 كم) مع الاستلام والتوصيل إلى العليا. بالإضافة إلى طلب #ORD-775 قيد التوصيل (8.1 كم) من West Terminal Hub إلى King Fahd Rd. زر 'View Details' لعرض تفاصيل المسار. نظام متابعة لوجستية متقدمة للسائق.",
+            tech: ["Flutter", "Django Channels", "PostgreSQL"],
+            libs: ["flutter_slidable", "cached_network_image", "timeago", "dio"],
+            flow: "GET /api/driver/tasks?status=active → عرض القائمة; WebSocket لتحديث حالة الطلب في الوقت الفعلي; POST /api/driver/complete-pickup."
         },
         {
             id: 4,
-            src: "ahmetou screens_venduer_6.jpeg",
-            title: "تتبع الطلب للمشتري | Driver & QR",
-            category: "acheteur",
-            assign: "Ahmetou",
-            desc: "شاشة تعرض تفاصيل تتبع الطلب للمشتري بعد تعيين السائق: معلومات السائق (خالد منصور، Toyota Dyna)، QR code لتأكيد استلام الحيوان من المزرعة، ومرحلة 'تم استلام الحيوان'. مستخلصة من إشعارات البائع ولكنها تخدم المشتري أيضاً.",
-            tech: ["Flutter", "Google Maps", "QR Scanner"],
-            libs: ["google_maps_flutter", "qr_flutter", "url_launcher", "mobile_scanner"],
-            flow: "GET /api/orders/tracking/{id} → عرض موقع السائق على الخريطة وحالة الشحنة; POST /api/orders/confirm-collection لمسح QR وتأكيد الاستلام."
+            src: "livreur sccreens inejih 4.jpeg",
+            title: "الملاحة الذكية | Turn-by-Turn Navigation + ETA",
+            category: "driver",
+            leader: "Inejih",
+            desc: "شاشة التوجيه الحيوي: 'Next Turn: Turn Right بعد 20 متر' مع اسم السوق (Tiba market) ووجهة الرياض. الوقت المتبقي 25 دقيقة / مسافة 12 كم، الوصول المتوقع 14:45. زر 'Arrived at Destination' لتأكيد الوصول. خريطة تفاعلية مع إرشادات صوتية ومؤشر حركة المرور.",
+            tech: ["Flutter", "Mapbox / Google Directions API", "WebRTC"],
+            libs: ["mapbox_gl", "flutter_polyline_points", "location", "just_audio"],
+            flow: "GET /api/driver/directions?from=...&to=... → تحديث المسار الحيوي → POST /api/driver/arrived عند الوصول → تحديث حالة الطلب."
         },
-
-        // ========== VENDEUR (7 شاشات كاملة) ==========
         {
             id: 5,
-            src: "ahmetou screens_venduer_1.jpeg",
-            title: "لوحة تحكم البائع | Dashboard",
-            category: "vendeur",
-            assign: "Ahmetou",
-            desc: "الصفحة الرئيسية للبائع: إحصائيات (Active Listings 24، Total Sales 45k SAR)، قائمة بالحيوانات المضافة مع حالة كل منها (ACTIVE، PENDING، SOLD). أزرار التصفية والتنقل.",
-            tech: ["Flutter", "Django REST"],
-            libs: ["fl_chart", "provider", "intl"],
-            flow: "GET /api/seller/dashboard → عرض المبيعات والإحصائيات; GET /api/seller/animals?status=... → قائمة الحيوانات."
+            src: "livreur sccreens inejih 5.jpeg",
+            title: "مسح QR لتأكيد التسليم | Animal QR Verification",
+            category: "driver",
+            leader: "Inejih",
+            desc: "شاشة مسح رمز QR الموجود على الحيوان لتأكيد عملية التسليم (handoff). ثلاثة أزرار حسب الدور: Seller Scan, Butcher Scan, Buyer Scan. زر 'Flash' لتشغيل الضوء، و'Verify & Confirm' للتأكيد النهائي بعد مسح الرمز. عملية آمنة للتأكد من استلام الحيوان الصحيح. الإصدار v2.4.0 مع تشفير متقدم.",
+            tech: ["Flutter", "Native QR SDK", "AES-256", "Hive"],
+            libs: ["mobile_scanner", "cryptography", "flutter_secure_storage", "vibration"],
+            flow: "مسح QR → فك التشفير محلياً → POST /api/delivery/confirm-handoff → التحقق من صحة الحيوان → تحديث سلسلة التوريد."
         },
         {
             id: 6,
-            src: "ahmetou screens_venduer_2.jpeg",
-            title: "إضافة حيوان - الخطوة 1: اختيار النوع",
-            category: "vendeur",
-            assign: "Ahmetou",
-            desc: "الخطوة الأولى من إضافة حيوان: اختيار نوع الحيوان (Sheep، Goat، Camel، Cow) ثم اختيار السلالة (Breed). واجهة مبسطة مع أزرار اختيار.",
-            tech: ["Flutter"],
-            libs: ["flutter_svg", "dropdown_search"],
-            flow: "تخزين مؤقت لنوع الحيوان → الانتقال إلى الخطوة 2 مع تمرير البيانات."
-        },
-        {
-            id: 7,
-            src: "ahmetou screens_venduer_3.jpeg",
-            title: "إضافة حيوان - الخطوة 2: السعر والوصف",
-            category: "vendeur",
-            assign: "Ahmetou",
-            desc: "إدخال السعر (MRU)، الوزن (كجم)، وصف تفصيلي للحيوان. نسبة الإكمال 66%. نصائح لتسريع البيع.",
-            tech: ["Flutter"],
-            libs: ["flutter_form_builder", "number_picker"],
-            flow: "التحقق من صحة المدخلات → تخزين البيانات في نموذج مؤقت → التالي."
-        },
-        {
-            id: 8,
-            src: "ahmetou screens_venduer_4.jpeg",
-            title: "إضافة حيوان - الخطوة 3: الصور والموقع",
-            category: "vendeur",
-            assign: "Ahmetou",
-            desc: "رفع صور عالية الجودة للحيوان، تحديد الموقع تلقائياً عبر GPS (Riyadh Central) أو تعديل يدوي. الخطوة النهائية لنشر الإعلان.",
-            tech: ["Flutter", "Google Maps", "Image Picker"],
-            libs: ["image_picker", "geolocator", "google_maps_flutter"],
-            flow: "رفع الصور إلى CDN → حفظ الموقع → POST /api/animals/create → إنشاء الحيوان."
-        },
-        {
-            id: 9,
-            src: "ahmetou screens_venduer_5.jpeg",
-            title: "نشر الإعلان بنجاح | Listing Published",
-            category: "vendeur",
-            assign: "Ahmetou",
-            desc: "تأكيد نشر الإعلان بنجاح مع رقم الإعلان #AM-8842، رمز QR لمشاركة الإعلان، وتفاصيل الحصان العربي الأصيل بسعر 125,000 SAR. زر لعرض الإعلان أو العودة للوحة.",
-            tech: ["Flutter", "QR Code"],
-            libs: ["qr_flutter", "share_plus"],
-            flow: "عرض استجابة الخادم → إنشاء QR من رابط الإعلان → خيارات المشاركة."
-        },
-        {
-            id: 10,
-            src: "ahmetou screens_venduer_6.jpeg",
-            title: "إشعارات البائع | تتبع الطلبات والسائق",
-            category: "vendeur",
-            assign: "Ahmetou",
-            desc: "مركز إشعارات البائع: طلبات جديدة (3 طلبات اليوم)، رصيد المحفظة 8.2k، إجمالي 12 عملية. تفاصيل: طلب جديد (تجدي أصيل)، تم استلام الدفع (4,500 SAR)، تعيين سائق (خالد منصور)، تأكيد استلام الحيوان عبر QR.",
-            tech: ["Flutter", "Firebase Cloud Messaging"],
-            libs: ["firebase_messaging", "timeago", "swipe_to_action"],
-            flow: "GET /api/seller/notifications → عرض القائمة; WebSocket لتحديث الإشعارات الفورية; POST /api/orders/confirm-shipment لتأكيد الشحن."
-        },
-        {
-            id: 11,
-            src: "ahmetou screens_achetuer 9.jpeg",
-            title: "نتائج الفلتر | لا توجد حيوانات (عرض للمشتري/البائع)",
-            category: "vendeur",
-            assign: "Ahmetou",
-            desc: "شاشة تعرض رسالة 'لم يتم العثور على حيوانات في هذه الفئة' مع خيار مسح جميع الفلاتر أو العودة إلى البحث. تُستخدم في قسم البائع عند تصفح الحيوانات المضافة أو البحث.",
-            tech: ["Flutter"],
-            libs: ["shimmer", "provider"],
-            flow: "GET /api/marketplace?filters=... أو /api/seller/animals?filter → استجابة فارغة → عرض حالة فارغة مع إعادة تعيين الفلاتر."
+            src: "livreur sccreens inejih 6.jpeg",
+            title: "إشعار استلام الدفع بنجاح | Bankily Payout Confirmation",
+            category: "driver",
+            leader: "Inejih",
+            desc: "تأكيد استلام الدفع بقيمة 1,200 SAR إلى حساب Bankily الخاص بالسائق. تفاصيل المعاملة: ORDER ID #ORD-92831 بتاريخ 24 أكتوبر 2023. رسالة 'Funds transferred to your Bankily account'. زر 'View Details' لعرض إيصال المعاملة. تكامل كامل مع بوابة Bankily للمدفوعات الفورية للسائقين.",
+            tech: ["Flutter", "Bankily API", "JWT", "Django REST"],
+            libs: ["dio", "jwt_decoder", "flutter_local_notifications", "path_provider"],
+            flow: "POST /api/payment/bankily/confirm-payout → تحقق من المعاملة → تحديث رصيد المحفظة → إرسال إشعار فوري للسائق → عرض إيصال الدفع."
         }
     ];
 
-    console.log(`✅ تم تحليل ${ahmetouScreens.length} شاشة لـ Ahmetou (${ahmetouScreens.filter(s => s.category === "acheteur").length} Acheteur + ${ahmetouScreens.filter(s => s.category === "vendeur").length} Vendeur)`);
+    console.log(`🔥 INEJIH LEADER: تم تحليل ${inejihScreens.length} شاشة متطورة للسائق (أعلى جودة معمارية)`);
     
     let currentModalScreen = null;
 
-    // عرض الشاشات حسب الفئة
-    function renderScreens() {
-        const acheteurContainer = document.getElementById("acheteurContainer");
-        const vendeurContainer = document.getElementById("vendeurContainer");
+    // عرض شاشات INEJIH البطل
+    function renderInejihScreens() {
+        const container = document.getElementById("inejihContainer");
+        if (!container) return;
         
-        const acheteurScreens = ahmetouScreens.filter(s => s.category === "acheteur");
-        const vendeurScreens = ahmetouScreens.filter(s => s.category === "vendeur");
-        
-        // عرض شاشات المشتري
-        acheteurContainer.innerHTML = acheteurScreens.map(screen => `
-            <div class="screen-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all" onclick='showScreenModal(${JSON.stringify(screen).replace(/'/g, "\\'")})'>
+        container.innerHTML = inejihScreens.map(screen => `
+            <div class="screen-card bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 border-b-4 border-teal-500" onclick='showScreenModal(${JSON.stringify(screen).replace(/'/g, "\\'")})'>
                 <div class="relative">
-                    <img src="${screen.src}" class="w-full aspect-[9/19] object-cover bg-gray-100 border-b-2 border-teal-200" alt="${screen.title}" 
-                         onerror="this.src='https://placehold.co/300x570?text=${encodeURIComponent(screen.title)}&bg=ccfbf1&text_color=0f766e'">
-                    <div class="absolute top-3 right-3 bg-teal-700 text-white text-[10px] px-2.5 py-1 rounded-full font-bold shadow">Acheteur</div>
-                    <button onclick="event.stopPropagation(); downloadSingleScreenImage(${JSON.stringify(screen).replace(/'/g, "\\'")})" 
-                            class="absolute bottom-3 left-3 bg-white/90 hover:bg-teal-600 hover:text-white text-teal-700 rounded-full w-8 h-8 flex items-center justify-center shadow-md transition-all">
-                        <i class="fa-solid fa-download text-sm"></i>
-                    </button>
-                </div>
-                <div class="p-4">
-                    <p class="font-bold text-sm leading-tight text-teal-900">${screen.title}</p>
-                    <div class="flex justify-between text-[10px] text-slate-500 mt-2">
-                        <span><i class="fa-regular fa-credit-card"></i> المشتري</span>
-                        <span class="bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full text-[9px]">Phase 2</span>
+                    <img src="${screen.src}" class="w-full aspect-[9/19] object-cover bg-gray-100" alt="${screen.title}" 
+                         onerror="this.src='https://placehold.co/300x570?text=${encodeURIComponent(screen.title)}&bg=cffafe&text_color=0f3b3b'">
+                    <div class="absolute top-3 right-3 bg-gradient-to-r from-red-700 to-teal-700 text-white text-[10px] px-3 py-1 rounded-full font-bold shadow-lg flex items-center gap-1">
+                        <i class="fa-solid fa-crown text-yellow-300 text-[10px]"></i> INEJIH
                     </div>
-                </div>
-            </div>
-        `).join('');
-        
-        // عرض شاشات البائع
-        vendeurContainer.innerHTML = vendeurScreens.map(screen => `
-            <div class="screen-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all" onclick='showScreenModal(${JSON.stringify(screen).replace(/'/g, "\\'")})'>
-                <div class="relative">
-                    <img src="${screen.src}" class="w-full aspect-[9/19] object-cover bg-gray-100 border-b-2 border-amber-200" alt="${screen.title}" 
-                         onerror="this.src='https://placehold.co/300x570?text=${encodeURIComponent(screen.title)}&bg=fef3c7&text_color=b45309'">
-                    <div class="absolute top-3 right-3 bg-amber-700 text-white text-[10px] px-2.5 py-1 rounded-full font-bold shadow">Vendeur</div>
                     <button onclick="event.stopPropagation(); downloadSingleScreenImage(${JSON.stringify(screen).replace(/'/g, "\\'")})" 
-                            class="absolute bottom-3 left-3 bg-white/90 hover:bg-amber-600 hover:text-white text-amber-700 rounded-full w-8 h-8 flex items-center justify-center shadow-md transition-all">
+                            class="absolute bottom-3 left-3 bg-white/95 hover:bg-teal-600 hover:text-white text-teal-700 rounded-full w-8 h-8 flex items-center justify-center shadow-lg transition-all">
                         <i class="fa-solid fa-download text-sm"></i>
                     </button>
                 </div>
-                <div class="p-4">
-                    <p class="font-bold text-sm leading-tight text-amber-900">${screen.title}</p>
-                    <div class="flex justify-between text-[10px] text-slate-500 mt-2">
-                        <span><i class="fa-solid fa-store"></i> البائع</span>
-                        <span class="bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full text-[9px]">Phase 2</span>
+                <div class="p-4 bg-gradient-to-b from-white to-teal-50">
+                    <p class="font-bold text-sm leading-tight text-teal-900 line-clamp-2">${screen.title}</p>
+                    <div class="flex justify-between items-center mt-3">
+                        <span class="text-[10px] bg-teal-100 text-teal-800 px-2 py-0.5 rounded-full"><i class="fa-solid fa-truck"></i> Driver Hub</span>
+                        <span class="text-[10px] text-amber-700"><i class="fa-regular fa-star"></i> Leader Edition</span>
                     </div>
                 </div>
             </div>
         `).join('');
     }
     
-    // عرض المودال
+    // عرض المودال بلمسة قائد
     window.showScreenModal = function(screen) {
         currentModalScreen = screen;
         document.getElementById("modalTitle").innerText = screen.title;
-        document.getElementById("modalImg").src = screen.src || "https://placehold.co/600x1100?text=Screen+Preview";
-        document.getElementById("modalDesc").innerText = screen.desc;
-        const badge = document.getElementById("modalTypeBadge");
-        if (screen.category === "acheteur") {
-            badge.innerHTML = '<i class="fa-regular fa-user"></i> شاشة المشتري (Acheteur)';
-            badge.classList.remove("bg-amber-700");
-            badge.classList.add("bg-teal-700");
-        } else {
-            badge.innerHTML = '<i class="fa-solid fa-store"></i> شاشة البائع (Vendeur)';
-            badge.classList.remove("bg-teal-700");
-            badge.classList.add("bg-amber-700");
-        }
+        document.getElementById("modalImg").src = screen.src || "https://placehold.co/600x1100?text=Inejih+Driver+Screen";
+        document.getElementById("modalDesc").innerHTML = `<span class="font-bold text-teal-700">🎯 Architecture I/O:</span> ${screen.desc}`;
         
         const techContainer = document.getElementById("modalTechStack");
-        techContainer.innerHTML = (screen.tech || ["Flutter", "Django"]).map(t => `<span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs"><i class="fa-solid fa-code"></i> ${t}</span>`).join("");
+        techContainer.innerHTML = (screen.tech || ["Flutter", "Django"]).map(t => `<span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-xs font-mono"><i class="fa-solid fa-microchip"></i> ${t}</span>`).join("");
         
         const libContainer = document.getElementById("modalLibraries");
         libContainer.innerHTML = (screen.libs || ["dio", "provider"]).map(l => `<span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs"><i class="fa-regular fa-gem"></i> ${l}</span>`).join("");
         
-        document.getElementById("modalFlow").innerText = screen.flow;
+        document.getElementById("modalFlow").innerHTML = `<i class="fa-regular fa-bolt text-teal-600"></i> ${screen.flow}`;
         
         const modal = document.getElementById("techModal");
         modal.classList.remove("hidden");
@@ -362,7 +264,7 @@
     window.downloadSingleScreenImage = function(screen) {
         if(!screen || !screen.src) return;
         const link = document.createElement('a');
-        link.download = `Ahmetou_${screen.title.replace(/\s+/g, '_')}.png`;
+        link.download = `Inejih_Leader_${screen.title.replace(/\s+/g, '_')}.png`;
         link.href = screen.src;
         document.body.appendChild(link);
         link.click();
@@ -371,7 +273,7 @@
     
     window.downloadSingleScreen = function() {
         if(currentModalScreen) downloadSingleScreenImage(currentModalScreen);
-        else alert("لا توجد شاشة محددة");
+        else alert("لا توجد شاشة محددة (Inejih)");
     };
     
     window.closeTechModal = function() {
@@ -381,47 +283,73 @@
         currentModalScreen = null;
     };
     
-    // تحميل جميع الشاشات (JSON + TXT)
-    function downloadAllAhmetouScreens() {
-        const dataStr = JSON.stringify(ahmetouScreens, null, 2);
+    // تحميل جميع الشاشات مع تفاصيل القائد (JSON + TXT)
+    function downloadAllInejihScreens() {
+        const enhancedData = {
+            project: "ALMARBAT - INEJIH Driver Full Analysis",
+            leader: "Inejih (القائد)",
+            totalScreens: inejihScreens.length,
+            description: "تحليل كامل لشاشات السائق INEJIH مع التقنيات وتدفق البيانات والهندسة المعمارية",
+            screens: inejihScreens
+        };
+        const dataStr = JSON.stringify(enhancedData, null, 2);
         const blob = new Blob([dataStr], { type: "application/json" });
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
-        a.download = `ALMARBAT_Ahmetou_11_screens_full_analysis.json`;
+        a.download = `ALMARBAT_INEJIH_LEADER_6_screens_analysis.json`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
         
-        const textList = ahmetouScreens.map((s, idx) => `${idx+1}. [${s.category === "acheteur" ? "ACHETEUR" : "VENDEUR"}] ${s.title}\n   - الوصف: ${s.desc.substring(0,120)}...\n   - التقنيات: ${s.tech.join(", ")}\n   - التدفق: ${s.flow}\n`).join("\n");
-        const textBlob = new Blob([`تحليل كامل لشاشات Ahmetou (المرحلة 2) — ${ahmetouScreens.length} شاشة (${ahmetouScreens.filter(s=>s.category==="acheteur").length} Acheteur + ${ahmetouScreens.filter(s=>s.category==="vendeur").length} Vendeur)\n\n${textList}`], { type: "text/plain" });
+        const textReport = `
+╔══════════════════════════════════════════════════════════════╗
+║      INEJIH DRIVER SUITE - LEADER ANALYSIS (ALMARBAT)       ║
+║         6 شاشات متطورة معمارياً لتوصيل المواشي              ║
+╚══════════════════════════════════════════════════════════════╝
+
+${inejihScreens.map((s, idx) => `
+[${idx+1}] ${s.title} (${s.category.toUpperCase()})
+📱 الوصف: ${s.desc}
+⚙️ التقنيات: ${s.tech.join(" → ")}
+📦 المكتبات: ${s.libs.join(", ")}
+🔄 التدفق البياني: ${s.flow}
+`).join("\n" + "─".repeat(60) + "\n")}
+
+✅ تم استخراج جميع الشاشات من ملفات livreur screens inejih (1-6.jpeg)
+🏆 القائد: INEJIH - نظام متكامل للدفع Bankily، QR، والملاحة الفورية.
+📅 تاريخ التحليل: ${new Date().toLocaleString()}
+        `;
+        const textBlob = new Blob([textReport], { type: "text/plain" });
         const textUrl = URL.createObjectURL(textBlob);
         const a2 = document.createElement("a");
         a2.href = textUrl;
-        a2.download = `Ahmetou_phase2_full_screens_list.txt`;
+        a2.download = `Inejih_Leader_Complete_Screens_Analysis.txt`;
         document.body.appendChild(a2);
         a2.click();
         document.body.removeChild(a2);
         URL.revokeObjectURL(textUrl);
         
-        alert(`✅ تم تحميل ${ahmetouScreens.length} شاشة كاملة لـ Ahmetou (JSON + قائمة نصية مع التحليل المعماري).`);
+        alert(`✅ نجاح كبير: تم تحميل ${inejihScreens.length} شاشة لـ INEJIH (القائد) مع ملف JSON وتحليل نصي متقدم.`);
     }
     
-    document.getElementById("downloadAllAhmetouBtn")?.addEventListener("click", downloadAllAhmetouScreens);
-    window.downloadAllAhmetouScreens = downloadAllAhmetouScreens;
+    document.getElementById("downloadAllInejihBtn")?.addEventListener("click", downloadAllInejihScreens);
+    window.downloadAllInejihScreens = downloadAllInejihScreens;
     
     // بدء العرض
-    renderScreens();
+    renderInejihScreens();
 </script>
 
-<!-- تذييل مع الإشارة لجميع المصادر -->
-<div class="bg-amber-900 text-white py-6 mt-10 text-center text-sm border-t-4 border-amber-500">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-3">
-        <span><i class="fa-regular fa-images"></i> تحليل كامل لملفات Ahmetou: acheteur (7,8,9,10,11) + vendeur (1,2,3,4,5,6)</span>
-        <span><i class="fa-regular fa-clock"></i> المرحلة 2: 4 شاشات مشتري + 7 شاشات بائع | توزيع متسلسل</span>
-        <span><i class="fa-solid fa-mobile-alt"></i> تجربة شاملة: Bankily، شراء جماعي، إدارة المزرعة، تتبع QR</span>
+<!-- تذييل مميز يعكس قيادة INEJIH -->
+<div class="bg-gradient-to-r from-teal-900 to-emerald-900 text-white py-7 mt-10 text-center text-sm border-t-4 border-yellow-500 shadow-inner">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-2"><i class="fa-solid fa-crown text-yellow-300 text-xl"></i> <span class="font-bold">INEJIH - قائد فريق التوصيل المتكامل</span></div>
+        <div><i class="fa-regular fa-images"></i> المصادر: livreur screens inejih (1.jpeg → 6.jpeg) + تحليل معماري 360°</div>
+        <div><i class="fa-regular fa-clock"></i> المرحلة المتقدمة: إشعارات لحظية، QR، Bankily، تتبع GPS، أداء 98%</div>
+        <div><i class="fa-solid fa-microchip"></i> Full-Stack: Flutter • Django • WebSockets • Edge AI</div>
     </div>
+    <div class="text-[11px] opacity-70 mt-3">⭐ تطوير بواسطة ALMARBAT - بنية تحتية ذكية لإدارة سلاسل توريد المواشي | القائد INEJIH يتفوق بمعايير عالمية</div>
 </div>
 </body>
 </html>
